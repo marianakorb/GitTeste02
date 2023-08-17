@@ -15,6 +15,7 @@ public class Soma {
 		}
 		
 		System.out.println("Soma: " + soma);
+		
 		sc.close();
 	}
 
