@@ -18,7 +18,10 @@ public class Soma {
 			lista.add(soma);
 		}
 		
+		double media = soma / 5;
+		
 		System.out.println("Soma: " + soma);
+		System.out.println("Média: " + media);
 		
 		sc.close();
 	}
