@@ -1,5 +1,7 @@
 package notas;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Soma {
@@ -8,10 +10,12 @@ public class Soma {
 		
 		Scanner sc = new Scanner(System.in);
 		int soma = 0;
+		List<Integer> lista = new ArrayList<>();
 		
 		for(int i=0; i < 5; i++) {
 			System.out.println("NOta do " + (i+1) + "° aluno");
-			soma = sc.nextInt();
+			soma += sc.nextInt();
+			lista.add(soma);
 		}
 		
 		System.out.println("Soma: " + soma);
