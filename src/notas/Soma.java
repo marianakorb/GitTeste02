@@ -11,17 +11,24 @@ public class Soma {
 		Scanner sc = new Scanner(System.in);
 		int soma = 0;
 		List<Integer> lista = new ArrayList<>();
+		int menoresQueSeis = 0;
 		
 		for(int i=0; i < 5; i++) {
 			System.out.println("NOta do " + (i+1) + "° aluno");
-			soma += sc.nextInt();
-			lista.add(soma);
+			int nota = sc.nextInt();
+			soma += nota;
+			lista.add(nota);
+			
+			if (nota < 6 ) {
+				menoresQueSeis++;
+			}
 		}
 		
-		double media = soma / 5;
+		double media = (double) soma / 5;
 		
 		System.out.println("Soma: " + soma);
 		System.out.println("Média: " + media);
+		System.out.println("Notas menores que 6: " + menoresQueSeis);
 		
 		sc.close();
 	}
