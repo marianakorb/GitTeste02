@@ -22,13 +22,31 @@ public class Soma {
 			if (nota < 6 ) {
 				menoresQueSeis++;
 			}
+			
 		}
+		
+		int maior = lista.get(0);
+		int menor = lista.get(0);
+		
+		for(int i=0; i < lista.size(); i++) {
+			
+			if(menor > lista.get(i)) {
+				menor = lista.get(i);
+			}
+			if(maior < lista.get(i)) {
+				maior = lista.get(i);
+			}
+			
+		}
+		
 		
 		double media = (double) soma / 5;
 		
 		System.out.println("Soma: " + soma);
 		System.out.println("Média: " + media);
 		System.out.println("Notas menores que 6: " + menoresQueSeis);
+		System.out.println("Menor nota: " + menor);
+		System.out.println("Maior nota: " + maior);
 		
 		sc.close();
 	}
